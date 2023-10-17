@@ -11,7 +11,7 @@ library(viridis)
 library(readxl)
 
 data <- read_excel("C:/Users/Anup Kumar/Desktop/R-Code/Data_Visualization/buble_chart/Child_Mortality_TFR.xlsx")
-data = data %>% filter(continent == "Asia" |continent == "Africa"| continent == "Europe")
+#data = data %>% filter(continent == "Asia" |continent == "Africa"| continent == "Europe")
 # Make a ggplot, but add frame=year: one image per year
 b_anim=ggplot(data, aes(child_mortality,tfr, size = population, color = continent)) +
   geom_point(alpha= 0.8) +
